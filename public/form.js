@@ -1,4 +1,4 @@
-const API_URL = 'https://lotus-apply-backend.vercel.app/form';
+const API_URL = 'https://lotus-apply-backend.vercel.app';
 
 document.getElementById('formRegister').addEventListener('submit', async function (e) {
     e.preventDefault();
