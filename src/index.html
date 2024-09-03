@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotus eSports</title>
+    <link rel="shortcut icon" type="imagex/png" href="../assets/images/lotus-log-ico.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+</head>
+<body class="bg-gray-900 text-white">
+    
+    <section class="h-screen flex flex-col justify-center items-center text-center bg-black relative" style="background-image: url('../assets/images/bg-lol.jpg');">
+        <div class="absolute inset-0 bg-gray-800 opacity-70"></div>
+        <div class="relative z-10">
+            <h1 class="text-4xl font-bold mb-4 suse-title">Bem-vindo à Lotus eSports</h1>
+            <div class="text-lg mb-6 suse-text">
+                <p>Lotus é um time dedicado a conquistar o cenário competitivo de League of Legends.</p>
+                <p>Junte-se a nós nessa jornada para a vitória!</p>
+            </div>
+            <img src="../assets/images/lotus-logo-transparent.png" alt="Imagem do Time Lotus" class="mx-auto mb-6 max-w-xs">
+        </div>
+        <a href="#recruitment" class="absolute bottom-10 animate-bounce text-white text-2xl">
+            <svg class="h-16 w-16 text-slate-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"/>
+            </svg>              
+        </a>
+    </section>
+    
+    <section id="recruitment" class="px-4 py-12 bg-gray-900 bg-cover bg-center relative" style="background-image: url('../assets/images/form-lol.jpg');">
+        <div class="absolute inset-0 bg-black opacity-80"></div>
+        <div class="container mx-auto max-w-lg relative z-10">
+            <h2 class="text-3xl font-bold text-center mb-6">Junte-se a nós</h2>
+            <div class="mb-6 text-center text-lg">
+                <p>Estamos em busca de novos talentos!</p>
+                <p>Preencha o formulário abaixo para se candidatar.</p>   
+            </div>
+            <form id="formRegister" class="bg-gray-900 p-8 rounded-lg shadow-lg">
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium mb-2">Nome</label>
+                    <input type="text" id="name" name="name" class="w-full p-3 bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="nick" class="block text-sm font-medium mb-2">Nick</label>
+                    <input type="text" id="nick" name="nick" class="w-full p-3 bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Nome no jogo#TAG" required>
+                </div>
+                <div class="mb-4">
+                    <label for="discord" class="block text-sm font-medium mb-2">Discord</label>
+                    <input type="discord" id="discord" name="discord" class="w-full p-3 bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="position" class="block text-sm font-medium mb-2">Lane</label>
+                    <select id="position" name="position" class="w-full p-3 bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        <option value="">Selecione sua posição</option>
+                        <option value="top">Top</option>
+                        <option value="jungle">Jungle</option>
+                        <option value="mid">Mid</option>
+                        <option value="adc">ADC</option>
+                        <option value="support">Support</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="elo" class="block text-sm font-medium mb-2">Elo Atual</label>
+                    <select id="elo" name="elo" class="w-full p-3 bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        <option value="">Selecione seu elo atual</option>
+                        <option value="emerald">Esmeralda</option>
+                        <option value="diamond">Diamante</option>
+                        <option value="master">Mestre</option>
+                        <option value="grandmaster">Grão-mestre</option>
+                        <option value="challenger">Desafiante</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-2">Disponibilidade para treinos</label>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="w-full mb-4">
+                            <label class="block text-sm font-medium mb-2">Dias da Semana</label>
+                            <div class="flex flex-wrap gap-2">
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="days[]" value="segunda" class="form-checkbox bg-gray-700 text-blue-500 border-gray-600 focus:ring-blue-500">
+                                    <span class="ml-2">Segunda</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="days[]" value="terca" class="form-checkbox bg-gray-700 text-blue-500 border-gray-600 focus:ring-blue-500">
+                                    <span class="ml-2">Terça</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="days[]" value="quarta" class="form-checkbox bg-gray-700 text-blue-500 border-gray-600 focus:ring-blue-500">
+                                    <span class="ml-2">Quarta</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="days[]" value="quinta" class="form-checkbox bg-gray-700 text-blue-500 border-gray-600 focus:ring-blue-500">
+                                    <span class="ml-2">Quinta</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="days[]" value="sexta" class="form-checkbox bg-gray-700 text-blue-500 border-gray-600 focus:ring-blue-500">
+                                    <span class="ml-2">Sexta</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="days[]" value="sabado" class="form-checkbox bg-gray-700 text-blue-500 border-gray-600 focus:ring-blue-500">
+                                    <span class="ml-2">Sábado</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="days[]" value="domingo" class="form-checkbox bg-gray-700 text-blue-500 border-gray-600 focus:ring-blue-500">
+                                    <span class="ml-2">Domingo</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <label for="hours" class="block text-sm font-medium mb-2">Horários</label>
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" name="hours[]" value="1930pm" class="form-checkbox bg-gray-700 text-blue-500 border-gray-600 focus:ring-blue-500">
+                            <span class="ml-2">Tenho disponibilidade para treinos a partir das 19:30h</span>
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 rounded-lg">Enviar Inscrição</button>
+            </form>
+        </div>
+    </section>
+    
+</body>
+<script src="form.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+</html>
