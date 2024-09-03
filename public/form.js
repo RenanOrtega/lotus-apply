@@ -39,6 +39,7 @@ document.getElementById('formRegister').addEventListener('submit', async functio
     })
     .then(() => {
         toastr.success('Formulário enviado com sucesso!');
+        this.reset();
     })
     .catch(error => {
         if (error.message === 'Já existe um cadastro com esse nick.') {
