@@ -1,3 +1,5 @@
+const API_URL = 'https://lotus-apply-backend.vercel.app/form';
+
 document.getElementById('formRegister').addEventListener('submit', async function (e) {
     e.preventDefault();
 
@@ -19,7 +21,7 @@ document.getElementById('formRegister').addEventListener('submit', async functio
         hours: checkedHours
     }
 
-    await fetch('http://localhost:3000/form',{
+    await fetch(`${API_URL}/apply`,{
         method: 'POST',
         headers: {
             'Content-type': 'application/json'
