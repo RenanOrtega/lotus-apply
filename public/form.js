@@ -17,6 +17,7 @@ document.getElementById('formRegister').addEventListener('submit', async functio
         email: formData.get('email'),
         position: formData.get('position'),
         elo: formData.get('elo'),
+        opgg: formData.get('opgg'),
         days: checkedDays,
         hours: checkedHours
     }
