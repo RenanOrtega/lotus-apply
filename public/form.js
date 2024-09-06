@@ -14,6 +14,7 @@ document.getElementById('formRegister').addEventListener('submit', async functio
     const data = {
         name: formData.get('name'),
         nick: formData.get('nick'),
+        discord: formData.get('discord'),
         email: formData.get('email'),
         position: formData.get('position'),
         elo: formData.get('elo'),
